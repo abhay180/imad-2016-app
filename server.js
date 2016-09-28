@@ -5,6 +5,20 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+
+var articleOne = {
+    title : 'Article one | james Bond',
+    heading : 'Article One',
+    date : 'sep 5 2016',
+    content : `
+              <p>
+	             This is the movie Diamonds are for ever! Bond gets to Willard Whyte at Baja Cal!
+	          </p>`
+};
+
+
+
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
