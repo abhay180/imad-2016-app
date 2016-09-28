@@ -71,7 +71,7 @@ var htmlTemplate = `<html>
     
    </body>
 </html>`;
-return htmlTempalte;
+return htmlTemplate;
 
 }
 
