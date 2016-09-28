@@ -1,5 +1,10 @@
 console.log('Loaded!');
 
+
+var element = document.getElementByID('main-text');
+element.innerHtml = 'New value';
+
+
 //Move the iamge
 /*var img= document.getElementbyId('madi');
 img.style.marginleft = '100px';  
