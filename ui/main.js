@@ -1,7 +1,7 @@
 console.log('Loaded!');
 
 
-var element = document.getElementByID('main-text');
+var element = document.getElementById('main-text');
 element.innerHtml = 'Hi. My name is Indiana Jones. This is my webapp!';
 
 
