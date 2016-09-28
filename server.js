@@ -5,8 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-
-var articleOne = {
+var articles = {
+  'article-one'   : {
     title : 'Article one | James Bond',
     heading : 'Diamonds are forever',
     date : 'sep 5 2016',
@@ -14,10 +14,8 @@ var articleOne = {
               <p>
 	             This is the movie Diamonds are for ever! Bond gets to Willard Whyte at Baja Cal!
 	          </p>`
-};
-
-
-var articleTwo = {
+},
+  'article-two'   : {
     title : 'Article Two | James Bond',
     heading : 'Octopussy',
     date : 'sep 6 2016',
@@ -25,9 +23,8 @@ var articleTwo = {
               <p>
 	             This is the movie Octopussy! Bond gets to Kamal Khan at Rajasthan!
 	          </p>`
-};
-
-var articleThree = {
+},
+  'article-three' : {
     title : 'Article Three | James Bond',
     heading : 'Golden Eye',
     date : 'sep 7 2016',
@@ -35,6 +32,7 @@ var articleThree = {
               <p>
 	             This is the movie Golden Eye! Bond gets to Sean penn in Cuba!
 	          </p>`
+}
 };
 
 
@@ -79,20 +77,15 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one', function (req, res) {
-  res.send(createTemplate(articleOne));
+app.get('/:articleName', function (req, res) {
+  //atticleName=article-one
+  var articleName= req.params.articleName;
+  res.send(createTemplate(articles[articleName]));
     
 });
 
-app.get('/article-two', function (req, res) {
-  res.send(createTemplate(articleTwo));
-    
-});
 
-app.get('/article-three', function (req, res) {
-  res.send(createTemplate(articleThree));
-    
-});
+
 
 
 
