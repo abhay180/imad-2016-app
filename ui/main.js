@@ -11,10 +11,21 @@ element.innerHTML = 'I am professor of Archeaology';
 var img= document.getElementById('madi');
 img.style.marginLeft = '100px';  
 var marginLeft=0;
+var marginRight=0;
+
 function moveRight() {
     marginLeft += 1;
     img.style.marginLeft = marginLeft +'px';
   }
+  
+  function moveLeft() {
+    marginRight += 1;
+    img.style.marginRight = marginRight +'px';
+  }
 img.onclick = function() {
   var interval = setInterval(moveRight,100);
+};
+
+img.doubleclick = function() {
+  var interval = setInterval(moveLeft,100);
 };
