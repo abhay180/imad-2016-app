@@ -83,4 +83,20 @@ var name = nameInput.value;
   request.send(null);
 };
     
+    
+clear.onclick = function() {
+    
+      request.onreadystatechange = function() {
+      if (request.readyState ===XMLHttpRequest.DONE) {
+           if(request.status===200) {
+               var ul = document.getElementById('namelist');
+               ul.innerHTML=''; 
+           }
+             
+      }
+  };
+  
+  request.open('GET', 'http://abhay180.imad.hasura-app.io/submit-name?name='+ name,true);
+  request.send(null);
+};
 
