@@ -6,8 +6,8 @@ element.innerHTML = 'Hi. My name is Indiana Jones. This is my webapp!';
 
 
 //Move the iamge
-/*var img= document.getElementbyId('madi');
-img.style.marginleft = '100px';  
+var img= document.getElementbyId('madi');
+img.style.marginLeft = '100px';  
 var marginLeft=0;
 function moveRight() {
     marginLeft += 10;
@@ -15,4 +15,4 @@ function moveRight() {
   }
 img.onclick = function() {
   var interval = setInterval(moveRight,100);
-};*/
+};
