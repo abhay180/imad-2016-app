@@ -86,11 +86,12 @@ var name = nameInput.value;
     
 clear.onclick = function() {
     
+      var request = new XMLHttpRequest();
       request.onreadystatechange = function() {
       if (request.readyState ===XMLHttpRequest.DONE) {
            if(request.status===200) {
                var ul = document.getElementById('namelist');
-               ul.innerHTML=''; 
+               ul.innerHTML=[]; 
            }
              
       }
