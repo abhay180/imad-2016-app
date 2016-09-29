@@ -86,6 +86,21 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+var names =[];
+//app.get('/submit-name/:name', function (req, res) {
+app.get('/submit-name', function (req, res) { // URL : /submit-name?name-xxxx
+  var name = req.params.name;
+  var name = req.query.name;
+  
+  names.push(name);
+  
+  //json : java script Object notation
+  
+  res.send(JSON.stringify(names));
+});
+
+
+
 app.get('/:articleName', function (req, res) {
   //atticleName=article-one
   var articleName= req.params.articleName;
@@ -111,15 +126,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 
-var names =[];
-app.get('/submit-name/:name', function (req, res) {
-  var name = req.params.name;
-  names.push(name);
-  
-  //json : java script Object notation
-  
-  res.send(JSON.stringify(names));
-});
+
 
 
 
