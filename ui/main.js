@@ -55,8 +55,8 @@ button.onclick = function() {
 */
 
 //submit name
-
 var submit = document.getElementById('submit_btn');
+var clear = document.getElementById('clear_btn');
 submit.onclick = function() {
   
   var request = new XMLHttpRequest();
