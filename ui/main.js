@@ -2,8 +2,8 @@ console.log('Loaded!');
 
 
 var element = document.getElementById('main-text');
-//element.innerHtml = 'Hi. My name is Indiana Jones. This is my webapp!';
-element.innerHTML = "XXXXXXXXXXXXXXXXXXX";
+element.innerHTML = 'Hi. My name is Indiana Jones. This is my webapp!';
+
 
 //Move the iamge
 /*var img= document.getElementbyId('madi');
