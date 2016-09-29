@@ -95,7 +95,7 @@ var names =[];
    res.send(JSON.stringify(names));
 });*/
 //Method-2
-app.get('/submit-name', function (req, res) { // URL : /submit-name?name-xxxx
+app.get('/submit-name', function (req, res) { // URL : /submit-name?name=xxxx
   var name = req.query.name;
   names.push(name);
   //json : java script Object notation
