@@ -26,6 +26,6 @@ function moveRight() {
 //  var interval = setInterval(moveRight,100);
 //};
 
-img.click = function() {
+img.onclick = function() {
   var interval = setInterval(moveLeft,100);
 };
