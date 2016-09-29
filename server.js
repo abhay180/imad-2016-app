@@ -87,15 +87,18 @@ app.get('/', function (req, res) {
 });
 
 var names =[];
-//app.get('/submit-name/:name', function (req, res) {
+//Method-1
+/*app.get('/submit-name/:name', function (req, res) {
+   var name = req.params.name;
+   names.push(name);
+   //json : java script Object notation
+   res.send(JSON.stringify(names));
+});*/
+//Method-2
 app.get('/submit-name', function (req, res) { // URL : /submit-name?name-xxxx
-  //var name = req.params.name;
   var name = req.query.name;
-  
   names.push(name);
-  
   //json : java script Object notation
-  
   res.send(JSON.stringify(names));
 });
 
