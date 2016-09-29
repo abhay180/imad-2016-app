@@ -2,7 +2,7 @@ console.log('Loaded!');
 
 
 var element = document.getElementById('personal');
-element.innerHTML = "Hi. My name is Indiana Jones. This is my webapp!";
+element.innerHTML = 'Hi. My name is Indiana Jones. This is my webapp!';
 
 
 //Move the iamge
