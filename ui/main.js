@@ -22,9 +22,9 @@ function moveRight() {
     marginRight += 1;
     img.style.marginRight = marginRight +'px';
   }
-img.onclick = function() {
-  var interval = setInterval(moveRight,100);
-};
+//img.onclick = function() {
+//  var interval = setInterval(moveRight,100);
+//};
 
 img.doubleclick = function() {
   var interval = setInterval(moveLeft,100);
